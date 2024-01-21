@@ -132,3 +132,21 @@ const $logo: ImageStyle = {
   height: 38,
   width: 38,
 }
+// src/screens/HomeScreen.js
+// import React from "react"
+// import { View, Text, Button } from "react-native"
+
+// const HomeScreen = ({ navigation }) => {
+//   const startQuiz = () => {
+//     navigation.navigate("Quiz")
+//   }
+
+//   return (
+//     <View>
+//       <Text>Welcome to the Quiz App!</Text>
+//       <Button title="Start Quiz" onPress={startQuiz} />
+//     </View>
+//   )
+// }
+
+// export default HomeScreen

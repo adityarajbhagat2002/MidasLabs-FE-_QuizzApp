@@ -380,3 +380,23 @@ const $emptyStateImage: ImageStyle = {
   transform: [{ scaleX: isRTL ? -1 : 1 }],
 }
 // #endregion
+
+
+// src/screens/ResultScreen.js
+// import React from "react"
+// import { View, Text, Button } from "react-native"
+
+// const ResultScreen = ({ navigation }) => {
+//   const restartQuiz = () => {
+//     navigation.navigate("Home")
+//   }
+
+//   return (
+//     <View>
+//       <Text>Congratulations! You completed the quiz!</Text>
+//       <Button title="Restart Quiz" onPress={restartQuiz} />
+//     </View>
+//   )
+// }
+
+// export default ResultScreen

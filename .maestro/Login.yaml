@@ -1,19 +1,43 @@
-#flow: Login
-#intent:
-# Open up our app and use the default credentials to login
-# and navigate to the demo screen
+# #flow: Login
+# #intent:
+# # Open up our app and use the default credentials to login
+# # and navigate to the demo screen
 
-appId: com.quizzapp # the app id of the app we want to test
-# You can find the appId of an Ignite app in the `app.json` file
-# as the "package" under the "android" section and "bundleIdentifier" under the "ios" section
+# appId: com.quizzapp # the app id of the app we want to test
+# # You can find the appId of an Ignite app in the `app.json` file
+# # as the "package" under the "android" section and "bundleIdentifier" under the "ios" section
+# ---
+# - clearState # clears the state of our app (navigation and authentication)
+# - launchApp # launches the app
+# - assertVisible: "Sign In"
+# - tapOn:
+#     text: "Tap to sign in!"
+# - assertVisible: "Your app, almost ready for launch!"
+# - tapOn:
+#     text: "Let's go!"
+# - assertVisible: "Components to jump start your project!"
+
+# intent: Test a complete quiz journey, answering some questions correctly and some incorrectly
+appId: com.quizzapp  # Replace with your actual app ID
+
 ---
-- clearState # clears the state of our app (navigation and authentication)
-- launchApp # launches the app
-- assertVisible: "Sign In"
+- launchApp
+
+- assertVisible: "Start Quiz"
 - tapOn:
-    text: "Tap to sign in!"
-- assertVisible: "Your app, almost ready for launch!"
+    text: "Start Quiz"
+- assertVisible: "Question 1"  # Assuming the first question is displayed
 - tapOn:
-    text: "Let's go!"
-- assertVisible: "Components to jump start your project!"
+     text: "Kathmandu"  # Assuming "Paris" is the correct answer for question 1
+- assertVisible: "Question 2"  # Assuming the next question is shown
+- tapOn:
+     text: "New Delhi"  # Assuming an incorrect answer
+- assertVisible: "Incorrect! The correct answer is:"  # Check for error message
+- tapOn:
+    text: "Check Answer"  # Proceed to the next question
+-
+- assertVisible: "Congratulations! You completed the quiz!"  # Check for final screen
+- tapOn:
+    text: "Restart Quiz"
+- assertVisible: "Start Quiz"  # Verify navigation back to the home screen
 

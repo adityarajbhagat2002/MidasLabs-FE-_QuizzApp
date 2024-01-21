@@ -148,3 +148,63 @@ const $hint: TextStyle = {
   lineHeight: 15,
   paddingBottom: spacing.lg,
 }
+
+// src/screens/QuizScreen.js
+// import React, { useState } from "react"
+// import { View, Text, Button } from "react-native"
+
+// const questions = [
+//   { question: "What is the capital of Nepal?", answer: "Kathmandu" },
+//   { question: "What is the capital of France?", answer: "Paris" },
+//   { question: "What is the capital of India?", answer: "New Delhi" },
+//   { question: "What is the capital of United States? ", answer: "Washington D.C" },
+//   { question: "What is the capital of Canada ? ", answer: "Ottawa" },
+//   { question: "What is the capital of United Kingdom", answer: "London" },
+//   { question: "What is the capital ofGermany", answer: "Berlin" },
+//   { question: "What is the capital of Italy ", answer: "Rome" },
+//   { question: "What is the capital of Spain", answer: "Madrid" },
+//   { question: "What is the capital of Japan", answer: "Tokyo" },
+//   { question: "What is the capital of China", answer: "Beijing" },
+//   { question: "What is the capital of Brazil", answer: "Bre" },
+//   { question: "What is the capital of Australia ", answer: "Canberra" },
+//   { question: "What is the capital of Russia", answer: "Moscow" },
+//   { question: "What is the capital of Nigeria", answer: "Abuja" },
+//   { question: "What is the capital of South Korea", answer: "Seol" },
+//   { question: "What is the capital of Egypt", answer: "Cairo" },
+// ]
+
+// const QuizScreen = ({ navigation }) => {
+//   const [currentQuestion, setCurrentQuestion] = useState(0)
+
+//   const checkAnswer = (userAnswer) => {
+//     const correctAnswer = questions[currentQuestion].answer
+//     if (userAnswer === correctAnswer) {
+//       // Handle correct answer
+//       alert("Correct!")
+//     } else {
+//       // Handle incorrect answer
+//       alert("Incorrect!")
+//     }
+
+//     // Move to the next question
+//     if (currentQuestion < questions.length - 1) {
+//       setCurrentQuestion(currentQuestion + 1)
+//     } else {
+//       // End of the quiz, navigate to ResultScreen
+//       navigation.navigate("Result")
+//     }
+//   }
+
+//   return (
+//     <View>
+//       <Text>Question {currentQuestion + 1}</Text>
+//       <Text>{questions[currentQuestion].question}</Text>
+//       <Button title="Option A" onPress={() => checkAnswer("Option A")} />
+//       <Button title="Option B" onPress={() => checkAnswer("Option B")} />
+//       <Button title="Option C" onPress={() => checkAnswer("Option C")} />
+//       <Button title="Option D" onPress={() => checkAnswer("Option D")} />
+//     </View>
+//   )
+// }
+
+// export default QuizScreen
